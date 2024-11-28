@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcription Preview</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
+            <h1 class="text-2xl font-bold mb-6">Transcription Preview</h1>
+
+            <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+                <pre class="whitespace-pre-wrap text-sm text-gray-800">{{ transcription_text }}</pre>
+            </div>
+
+            <div class="flex space-x-4 justify-center">
+                <form action="{{ url_for('download') }}" method="GET">
+                    <button type="submit" 
+                            class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200">
+                        Download Transcription
+                    </button>
+                </form>
+
+                <form action="{{ url_for('improve') }}" method="POST">
+                    <input type="hidden" name="transcription_text" value="{{ transcription_text }}">
+                    <button type="submit" 
+                            class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200">
+                        Improve Transcription
+                    </button>
+                </form>
+
+                <a href="/" 
+                   class="bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded-lg transition duration-200">
+                    New Transcription
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Audio File</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        #spinner {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #spinner i {
+            font-size: 3em;
+            color: #007BFF;
+        }
+        #errorMessage {
+            display: none;
+            color: red;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid red;
+            border-radius: 4px;
+            background-color: #ffebee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload Your Audio File for Transcription</h1>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Choose an audio file:</label>
+        <input type="file" id="file" name="file" required>
+        <button type="submit">Upload</button>
+    </form>
+    <div id="spinner">
+        <i class="fas fa-spinner fa-spin"></i>
+        <p>Processing your file, please wait...</p>
+    </div>
+    <!-- Added error message div -->
+    <div id="errorMessage"></div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get references to elements
+            const spinnerElement = document.getElementById('spinner');
+            const errorDiv = document.getElementById('errorMessage');
+
+            // Show spinner, hide any previous errors
+            spinnerElement.style.display = 'block';
+            errorDiv.style.display = 'none';
+
+            const formData = new FormData(this);
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                spinnerElement.style.display = 'none';
+
+                if (data.redirect) {
+                    window.location.href = data.redirect;
+                } else if (data.error) {
+                    errorDiv.textContent = 'Error: ' + data.error;
+                    errorDiv.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                spinnerElement.style.display = 'none';
+                errorDiv.textContent = 'An error occurred: ' + error.message;
+                errorDiv.style.display = 'block';
+                console.error('Upload error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

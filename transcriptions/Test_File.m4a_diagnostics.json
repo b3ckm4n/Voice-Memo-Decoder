@@ -1,0 +1,41 @@
+{
+  "total_duration": 1.8290629386901855,
+  "steps": {
+    "system": {
+      "cpu_percent": 50.0,
+      "memory_percent": 57.4,
+      "disk_percent": 21.6,
+      "memory_available": 27389.2265625
+    },
+    "file_validation": {
+      "timestamp": 0.0002086162567138672,
+      "system_metrics": {
+        "cpu_percent": 0.0,
+        "memory_percent": 57.4,
+        "disk_percent": 21.6,
+        "memory_available": 27389.2265625
+      },
+      "file_size": 63088
+    },
+    "file_read_start": {
+      "timestamp": 0.0003972053527832031,
+      "system_metrics": {
+        "cpu_percent": 0.0,
+        "memory_percent": 57.4,
+        "disk_percent": 21.6,
+        "memory_available": 27389.2265625
+      }
+    },
+    "api_request_complete": {
+      "timestamp": 1.82863187789917,
+      "system_metrics": {
+        "cpu_percent": 21.0,
+        "memory_percent": 57.6,
+        "disk_percent": 21.6,
+        "memory_available": 27277.01171875
+      },
+      "status_code": 200,
+      "response_time": 1.82542
+    }
+  }
+}

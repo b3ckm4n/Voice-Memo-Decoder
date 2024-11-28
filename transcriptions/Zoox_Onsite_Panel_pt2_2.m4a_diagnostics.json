@@ -1,0 +1,112 @@
+{
+  "total_duration": 78.32068943977356,
+  "steps": {
+    "system": {
+      "cpu_percent": 0.0,
+      "memory_percent": 21.7,
+      "disk_percent": 19.4,
+      "memory_available": 50340.4453125,
+      "timestamp": 1732685171.4003234
+    },
+    "upload_start": {
+      "timestamp": 0.00030517578125,
+      "system_metrics": {
+        "cpu_percent": 0.0,
+        "memory_percent": 21.7,
+        "disk_percent": 19.4,
+        "memory_available": 50340.4453125,
+        "timestamp": 1732685171.4004574
+      }
+    },
+    "file_save_start": {
+      "timestamp": 6.525362253189087,
+      "system_metrics": {
+        "cpu_percent": 6.4,
+        "memory_percent": 21.5,
+        "disk_percent": 19.4,
+        "memory_available": 50468.3203125,
+        "timestamp": 1732685177.9256182
+      }
+    },
+    "file_save_complete": {
+      "timestamp": 6.545879364013672,
+      "system_metrics": {
+        "cpu_percent": 60.0,
+        "memory_percent": 21.5,
+        "disk_percent": 19.4,
+        "memory_available": 50469.0234375,
+        "timestamp": 1732685177.946169
+      }
+    },
+    "preprocessing_complete": {
+      "timestamp": 22.540599822998047,
+      "system_metrics": {
+        "cpu_percent": 14.6,
+        "memory_percent": 21.5,
+        "disk_percent": 19.4,
+        "memory_available": 50461.16015625,
+        "timestamp": 1732685193.9409142
+      }
+    },
+    "chunk_1_start": {
+      "timestamp": 22.92879366874695,
+      "system_metrics": {
+        "cpu_percent": 40.7,
+        "memory_percent": 21.8,
+        "disk_percent": 19.4,
+        "memory_available": 50266.7265625,
+        "timestamp": 1732685194.3290644
+      }
+    },
+    "chunk_2_start": {
+      "timestamp": 34.6740288734436,
+      "system_metrics": {
+        "cpu_percent": 10.7,
+        "memory_percent": 22.1,
+        "disk_percent": 19.4,
+        "memory_available": 50094.53515625,
+        "timestamp": 1732685206.0744123
+      }
+    },
+    "chunk_3_start": {
+      "timestamp": 48.98362588882446,
+      "system_metrics": {
+        "cpu_percent": 12.0,
+        "memory_percent": 20.2,
+        "disk_percent": 19.4,
+        "memory_available": 51296.16015625,
+        "timestamp": 1732685220.3839953
+      }
+    },
+    "chunk_4_start": {
+      "timestamp": 65.3084032535553,
+      "system_metrics": {
+        "cpu_percent": 20.2,
+        "memory_percent": 19.7,
+        "disk_percent": 19.4,
+        "memory_available": 51661.96875,
+        "timestamp": 1732685236.7087557
+      }
+    },
+    "chunk_4_complete": {
+      "timestamp": 78.31870889663696,
+      "system_metrics": {
+        "cpu_percent": 9.0,
+        "memory_percent": 19.4,
+        "disk_percent": 19.4,
+        "memory_available": 51820.5546875,
+        "timestamp": 1732685249.718942
+      }
+    },
+    "save_complete": {
+      "timestamp": 78.32039594650269,
+      "system_metrics": {
+        "cpu_percent": 0.0,
+        "memory_percent": 19.4,
+        "disk_percent": 19.4,
+        "memory_available": 51812.9609375,
+        "timestamp": 1732685249.7206259
+      }
+    }
+  }
+}
